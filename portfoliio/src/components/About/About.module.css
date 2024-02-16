@@ -61,4 +61,14 @@
     text-align: start;
     width: 100%;
   }
+
+  .about_text h2 {
+    font-size: 1.5rem;
+    line-height: 115%;
+  }
+  
+  .about_text p {
+    font-size: 1rem;
+    line-height: 120%;
+  }
 }
