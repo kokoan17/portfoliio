@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Experience.module.css";
 
+import classNames from "class-names"
+
 const Experience = () => {
   return (
     <section id="experience" className={styles.section_experience}>
@@ -20,7 +22,7 @@ const Experience = () => {
               актуальную инофрмацию о парковочных местах.
             </p>
           </div>
-          <div className={styles.experience_item}>
+          <div className={classNames(styles.experience_item, styles.response_item_1)}>
             <h3>Проект по футбольной аналитике</h3>
             <p className={styles.date}>25.12.23 - настоящее время</p>
             <p>
@@ -44,6 +46,17 @@ const Experience = () => {
             дизайн - разработка - хостинг.
           </p>
         </div>
+        <div className={classNames(styles.experience_item, styles.response_item_2)}>
+            <h3>Проект по футбольной аналитике</h3>
+            <p className={styles.date}>25.12.23 - настоящее время</p>
+            <p>
+              Если говорить по-простому, данный проект является русским аналогом
+              smart tables. Мы собираем инофрмацию по футбольным событям и я
+              отрисовываю ее "под разными углами". Данный проект познакомил меня
+              с кросс платформенной версткой, кастомными хуками и конечно же с
+              яндекс трекером)
+            </p>
+          </div>
       </div>
     </section>
   );

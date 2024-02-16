@@ -26,6 +26,10 @@
   gap: 20px;
 }
 
+.response_item_2 {
+  display: none;
+}
+
 .experience_item {
   width: 550px;
   padding: 2rem 3rem;
@@ -55,6 +59,14 @@
   .block_experience {
     flex-direction: column;
   }
+
+  .response_item_1 {
+    display: none;
+  }
+
+  .response_item_2 {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -80,7 +92,7 @@
 @media (max-width: 550px) {
   .experience_item {
     width: 100%;
-    padding: 1.25rem 1.75rem;
+    padding: 2.2rem 2rem;
     border-radius: 46px;
     font-size: 1rem;
   }
