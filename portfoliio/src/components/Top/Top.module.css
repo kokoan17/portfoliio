@@ -67,4 +67,8 @@
   .wordBetween {
     display: block;
   }
+
+  .section_top {
+    padding-top: 80px;
+  }
 }
