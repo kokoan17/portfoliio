@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 
-import Person from "../../img/person.jpeg";
+import Person from "../../img/person2.png";
 
 const About = () => {
   return (
