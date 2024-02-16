@@ -1,0 +1,16 @@
+.wrapper {
+  position: relative;
+}
+
+.overlay_1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(180deg, rgb(57, 147, 96), hsla(158, 23%, 18%, 1));
+}
+
+.content {
+  width: 100vw;
+}

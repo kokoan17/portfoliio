@@ -1,0 +1,62 @@
+.footer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 300px 0px 50px;
+}
+
+.block_contacts {
+  text-align: center;
+}
+
+.contacts_items {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 80px;
+}
+
+.contacts_item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contacts_write {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.contacts_item p {
+  font-size: 1.25rem;
+  color: hsla(160, 52%, 71%, 1);
+}
+
+.contacts_item a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: hsla(159, 42%, 88%, 1);
+}
+
+@media (max-width: 1050px) {
+  .contacts_item p {
+    font-size: 1rem;
+  }
+
+  .contacts_item a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .contacts_items {
+    gap: 10%;
+  }
+
+  .contacts_item p {
+    font-size: 0.9rem;
+  }
+
+  .contacts_item a {
+    font-size: 0.75rem;
+  }
+}
