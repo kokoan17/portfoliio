@@ -6,7 +6,7 @@ import classNames from "class-names"
 const Experience = () => {
   return (
     <section id="experience" className={styles.section_experience}>
-      <h2>Опыт разработки</h2>
+      <h2 className="title">Опыт разработки</h2>
       <div className={styles.block_experience}>
         <div className={styles.experience_items_left}>
           <div className={styles.experience_item}>

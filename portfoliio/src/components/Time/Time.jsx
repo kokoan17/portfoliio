@@ -4,12 +4,16 @@ import styles from "./Time.module.css";
 import moment from "moment";
 
 const Time = () => {
-  const [duration, setDuration] = useState(null);
+  const [duration, setDuration] = useState(moment.duration(0)); // Изменено начальное значение duration
 
   useEffect(() => {
+    const currentDate = moment();
+    const targetDate = moment("2023-07-25");
+    const newDuration = moment.duration(targetDate.diff(currentDate));
+    setDuration(newDuration); // Установка значения duration без setInterval
+
     const interval = setInterval(() => {
       const currentDate = moment();
-      const targetDate = moment("2023-07-25");
       const newDuration = moment.duration(targetDate.diff(currentDate));
       setDuration(newDuration);
     }, 1000);

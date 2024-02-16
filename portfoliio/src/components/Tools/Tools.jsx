@@ -4,7 +4,7 @@ import styles from "./Tools.module.css";
 const Tools = () => {
   return (
     <section id="tools" className={styles.section_tools}>
-      <h2>Tools</h2>
+      <h2 className="title">Tools</h2>
       <div className={styles.block_tools}>
 
         <div className={styles.tools_items}>
