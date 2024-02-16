@@ -46,6 +46,14 @@
     padding: 8px 14.5px;
     font-size: 1rem;
   }
+
+  .block_tools {
+    gap: 10px;
+  }
+  
+  .tools_items {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -56,5 +64,13 @@
   .tools_item {
     padding: 6px 11.5px;
     font-size: 0.85rem;
+  }
+
+  .block_tools {
+    gap: 7.5px;
+  }
+  
+  .tools_items {
+    gap: 7.5px;
   }
 }
