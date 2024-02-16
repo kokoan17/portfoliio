@@ -35,6 +35,7 @@ const Time = () => {
         <p>В разработке интерфесов уже:</p>
         <p>
           <span>{-months}</span> месяцев <span>{-days}</span> дней{" "}
+          <br className={styles.spaceBetween} />
           <span>{-hours}</span> часов <span>{-minutes}</span> минут
         </p>
       </div>

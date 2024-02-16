@@ -12,6 +12,10 @@
   background-color: hsla(172, 45%, 75%, 1);
 }
 
+.spaceBetween {
+  display: none;
+}
+
 .block_time p {
   font-size: 2rem;
   color: #172920;
@@ -47,5 +51,9 @@
 
   .block_time p span {
     font-size: 1.55rem;
+  }
+
+  .spaceBetween {
+    display: block;
   }
 }
