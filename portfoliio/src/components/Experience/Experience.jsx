@@ -16,8 +16,6 @@ const Experience = () => {
         const elementTop1 = element1.getBoundingClientRect().top;
         const elementTop2 = element2.getBoundingClientRect().top;
 
-        console.log(elementTop1, elementTop2)
-
         const windowHeight = window.innerHeight;
 
         if (elementTop1 < windowHeight - 100) {
