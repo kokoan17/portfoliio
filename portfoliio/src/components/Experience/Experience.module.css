@@ -31,6 +31,14 @@
   background-color: hsla(206, 84%, 86%, 1);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.275rem;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.experience_item.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .experience_item h3 {

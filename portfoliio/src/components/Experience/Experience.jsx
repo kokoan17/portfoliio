@@ -1,9 +1,44 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Experience.module.css";
 
-import classNames from "class-names";
+import classNames from "class-names"
 
 const Experience = () => {
+  const [isScrolled1, setIsScrolled1] = useState(false);
+  const [isScrolled2, setIsScrolled2] = useState(false);
+  const [isScrolled3, setIsScrolled3] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element1 = document.getElementById("expirience_item1");
+      const element2 = document.getElementById("expirience_item2");
+      const element3 = document.getElementById("expirience_item3");
+      if (element1 && element2 && element3) {
+        const elementTop1 = element1.getBoundingClientRect().top;
+        const elementTop2 = element2.getBoundingClientRect().top;
+        const elementTop3 = element3.getBoundingClientRect().top;
+
+        const windowHeight = window.innerHeight;
+
+        if (elementTop1 < windowHeight - 100) {
+          setIsScrolled1(true);
+        }
+
+        if (elementTop2 < windowHeight - 200) {
+          setIsScrolled2(true);
+        }
+
+        if (elementTop3 < windowHeight - 300) {
+          setIsScrolled3(true);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section id="experience" className={styles.section_experience}>
@@ -11,8 +46,10 @@ const Experience = () => {
       <div className={styles.block_experience}>
         <div className={styles.experience_items_left}>
           <div
-            id="expirience_item"
-            className={classNames(styles.experience_item, { active: isActive })}
+            id="expirience_item1"
+            className={`${styles.experience_item} ${
+              isScrolled1 ? styles.active : ``
+            }`}
           >
             <h3>Хакатоны</h3>
             <p className={styles.date}>14.09.23 - настоящее время</p>
@@ -28,10 +65,10 @@ const Experience = () => {
             </p>
           </div>
           <div
-            className={classNames(
-              styles.experience_item,
-              styles.response_item_1
-            )}
+            id="expirience_item3"
+            className={`${styles.experience_item} ${styles.response_item_1} ${
+              isScrolled3 ? styles.active : ``
+            }`}
           >
             <h3>Проект по футбольной аналитике</h3>
             <p className={styles.date}>25.12.23 - настоящее время</p>
@@ -45,7 +82,9 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className={styles.experience_item}>
+        <div id="expirience_item2" className={`${styles.experience_item} ${
+              isScrolled2 ? styles.active : ``
+            }`}>
           <h3>Фриланс</h3>
           <p className={styles.date}>16.11.23 - настоящее время</p>
           <p>
@@ -57,7 +96,10 @@ const Experience = () => {
           </p>
         </div>
         <div
-          className={classNames(styles.experience_item, styles.response_item_2)}
+          id="expirience_item3"
+          className={`${styles.experience_item} ${styles.response_item_2} ${
+            isScrolled3 ? styles.active : ``
+          }`}
         >
           <h3>Проект по футбольной аналитике</h3>
           <p className={styles.date}>25.12.23 - настоящее время</p>
