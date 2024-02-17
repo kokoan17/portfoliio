@@ -12,12 +12,10 @@ const Experience = () => {
     const handleScroll = () => {
       const element1 = document.getElementById("expirience_item1");
       const element2 = document.getElementById("expirience_item2");
-      const element3 = document.getElementById("expirience_item3");
-      if (element1 && element2 && element3) {
+      if (element1 && element2) {
         const elementTop1 = element1.getBoundingClientRect().top;
         const elementTop2 = element2.getBoundingClientRect().top;
-        const elementTop3 = element3.getBoundingClientRect().top;
-
+        
         const windowHeight = window.innerHeight;
 
         if (elementTop1 < windowHeight - 100) {
@@ -28,7 +26,7 @@ const Experience = () => {
           setIsScrolled2(true);
         }
 
-        if (elementTop3 < windowHeight - 300) {
+        if (elementTop2 < windowHeight - 300) {
           setIsScrolled3(true);
         }
       }
