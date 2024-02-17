@@ -15,7 +15,9 @@ const Experience = () => {
       if (element1 && element2) {
         const elementTop1 = element1.getBoundingClientRect().top;
         const elementTop2 = element2.getBoundingClientRect().top;
-        
+
+        console.log(elementTop1, elementTop2)
+
         const windowHeight = window.innerHeight;
 
         if (elementTop1 < windowHeight - 100) {
@@ -26,7 +28,7 @@ const Experience = () => {
           setIsScrolled2(true);
         }
 
-        if (elementTop2 < windowHeight - 300) {
+        if (elementTop2 < windowHeight - 400) {
           setIsScrolled3(true);
         }
       }
